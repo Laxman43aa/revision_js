@@ -321,3 +321,67 @@ function sumAll2(...args) {
 let result10 = sumAll2(4, 9, 16, 25, 29, 100, 66, 77); // this will call the function sumAll2 with the arguments 4, 9, 16, 25, 29, 100, 66, and 77 and return the result which is 771 because the rest parameter allows the function to treat all the arguments as an array and sum them up
 console.log(result10);
 document.getElementById("demo17").innerHTML = "the sum of all numbers is: " + result10; // this will change the innerHTML of the element with id "demo17" to "the sum of all numbers is: 771" because we are calling the function and using its return value to set the innerHTML of the element
+
+// Function Expressions
+// A function expression is a function stored in a variable.
+
+// Standard Function
+function multiply8(a, b) {
+  return a * b;
+}
+// Function Expression
+const multiply9 = function(a, b) { return a * b; }; // this will create a function expression and store it in the variable multiply9, which can be called like a regular function
+let result11 = multiply9(5, 10); // this will call the function expression stored in the variable multiply9 with the arguments 5 and 10 and return the result which is 50 because 5 * 10 is 50
+console.log(result11); // this will print 50 to the console because 50 is the result of multiplying 5 and 10 using the function expression
+// After a function expression has been stored in a variable, the variable can be used as a function:
+let z = multiply9(4, 3);
+console.log(z); // this will print 12 to the console because 12 is the result of multiplying 4 and 3 using the function expression stored in the variable multiply9
+
+// Anonymous Functions
+// Function expressions are commonly used to create anonymous functions.
+
+// The function above is actually function without a name.
+
+// Functions stored in variables do not need names.
+
+// The variable name is used to call the function.
+
+const add2 = function(a, b) { return a + b;}; // this will create an anonymous function that adds two numbers and store it in the variable add2, which can be called like a regular function
+let result12 = add2(5, 10); // this will call the anonymous function stored in the variable add2 with the arguments 5 and 10 and return the result which is 15 because 5 + 10 is 15
+console.log(result12); // this will print 15 to the console because 15 is the result of adding 5 and 10 using the anonymous function stored in the variable add2
+
+// Functions Stored in Variables
+// Because a function expression is stored in a variable, it can be used like a value.
+// This is useful when passing functions to other functions (callbacks).
+
+// A function expression can be assigned to a variable, passed as an argument to another function, or returned from a function.
+
+function run(fn){
+    return fn(); // this will call the function passed as an argument and return its result
+}
+
+const sayHello3 = function() { return "hello";}; // this will create an anonymous function that returns "hello" and store it in the variable sayHello3
+run(sayHello3); // this will call the function run with the argument sayHello3 (which is the anonymous function) and return its result which is "hello" because the function run will call the function passed as an argument and return its result
+let result13 = run(sayHello3); // this will call the function run with the argument sayHello3 (which is the anonymous function) and return its result
+console.log(result13); // this will print "hello" to the console because "hello" is the result of calling the function stored in the variable sayHello3
+
+// Hoisting
+// Function declarations can be called before they are defined.
+
+// Function expressions can not be called before they are defined.
+
+// Function declarations are "hoisted" to the top of their scope. This means you can call a function before it is defined in the code:
+
+let sum4 = add(2, 3); // Will work because function declarations are hoisted
+
+function add(a, b) {return a + b;}
+console.log(sum4); // this will print 5 to the console because the function declaration is hoisted to the top of its scope, allowing us to call it before it is defined in the code
+
+// However, if you try to call a function expression before it is defined, you will get an error:
+// Function expressions are not hoisted in the same way as function declarations.
+
+// They are created when the execution reaches their definition, and cannot be called before that point:
+let sum5 = add3(2, 3); // ⛔ Will generate error
+
+const add3 = function (a, b) {return a + b;};
+console.log(sum5); // this will generate an error because the function expression is not hoisted and cannot be called before it is defined in the code

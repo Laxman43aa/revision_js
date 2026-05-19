@@ -1,0 +1,92 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.container{
+    background: rgb(22, 155, 82);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.container h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+#count{
+    font-size: 70px !important;
+    font-weight: bold;
+    color: #2a5298;
+    margin-bottom: 25px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+/* Individual Button Colors */
+button:nth-child(1){
+    background: #28a745;
+}
+
+button:nth-child(2){
+    background: #dc3545;
+}
+
+button:nth-child(3){
+    background: #ffc107;
+    color: black;
+}
+
+button:nth-child(4){
+    background: #007bff;
+}
+
+button:nth-child(5){
+    background: #6f42c1;
+}
+
+/* Hover Effects */
+button:hover{
+    transform: translateY(-3px);
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:active{
+    transform: scale(0.95);
+}

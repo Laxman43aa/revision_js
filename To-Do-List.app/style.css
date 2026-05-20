@@ -1,0 +1,233 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    padding: 20px;
+}
+
+/* Main Container */
+.container{
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.7s ease;
+}
+
+/* Heading */
+.container h3{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Input Field */
+#task{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    transition: 0.3s;
+}
+
+#task::placeholder{
+    color: rgba(255,255,255,0.7);
+}
+
+#task:focus{
+    background: rgba(255,255,255,0.28);
+    transform: scale(1.02);
+}
+
+/* All Buttons */
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+/* Add Button */
+.container > button:first-of-type{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #00c9a7;
+    color: white;
+}
+
+.container > button:first-of-type:hover{
+    background: #00a98b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,201,167,0.4);
+}
+
+/* Task List */
+ul{
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Task Item */
+li{
+    background: rgba(255,255,255,0.16);
+    color: white;
+    margin-bottom: 12px;
+    padding: 14px 14px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    animation: slideIn 0.35s ease;
+    transition: 0.3s;
+}
+
+li:hover{
+    background: rgba(255,255,255,0.24);
+    transform: translateY(-2px);
+}
+
+/* Task Text */
+li span{
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Remove Button */
+li button{
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    background: #ff4b5c;
+    color: white;
+
+    min-width: 70px;
+    flex-shrink: 0;
+
+    opacity: 0;
+    transform: scale(0.8);
+    animation: showBtn 0.4s ease forwards;
+    animation-delay: 0.2s;
+}
+
+li button:hover{
+    background: #e63946;
+    transform: scale(1.05);
+}
+
+/* Clear All Button */
+.container > button:last-of-type{
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #1b1b1b;
+    color: white;
+    font-size: 15px;
+}
+
+.container > button:last-of-type:hover{
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar */
+ul::-webkit-scrollbar{
+    width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+}
+
+/* Fade Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Task Animation */
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Remove Button Animation */
+@keyframes showBtn{
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width: 480px){
+
+    .container{
+        padding: 22px;
+    }
+
+    .container h3{
+        font-size: 24px;
+    }
+
+    li{
+        padding: 12px;
+    }
+
+    li span{
+        font-size: 14px;
+    }
+
+    li button{
+        min-width: 60px;
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}

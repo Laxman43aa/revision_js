@@ -147,10 +147,11 @@ console.log(length); // Outputs: 4
 // Accessing the First Array Element
 // Example
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let fruit = fruits2[0];
-console.log(fruit); // Outputs: Banana
+let fruit1 = fruits2[0];
+console.log(fruit1); // Outputs: Banana
 // Accessing the Last Array Element
 // Example
-const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-let fruit = fruits2[fruits2.length - 1];
-console.log(fruit); // Outputs: Mango
+// const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+let fruit2 = fruits2[fruits2.length - 1];
+console.log(fruit2); // Outputs: Mango
+

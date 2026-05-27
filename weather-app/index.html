@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+     <!-- Main Container -->
+    <div class="container">
+        
+        <!-- App Title -->
+        <h1>Weather App</h1>
+        
+        <!-- Search Box -->
+         <div class="search-box">
+        
+           <!-- Input Field -->
+         <input type="text" id="cityInput" placeholder="Enter city">
+          <!-- Search Button -->
+         <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <button id="locationBtn"><i class="fa-solid fa-location-dot"></i>Use Current Location</button>
+         <p id="loading"> 
+            Loading...  
+         </p>
+
+         <!-- Weather Information Box -->
+        <div class="weather-box">
+ 
+            <div class="left-panel">
+              <!-- City Name -->
+            <h3 id="cityName">City Name</h3>
+             <!-- Temperature -->
+            <h2 id="temperature">00°C</h2>
+             <!-- Weather Condition -->
+            <p id="condition">Clear Sky</p>
+            <!-- Extra Details -->
+            <div class="details">
+                <div class="detail-box">
+                    <h3>Humidity</h3>
+                    <p id="humidity">0%</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>Wind Speed</h3>
+                    <p id="wind">0 km/h</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+
+        <img id="weatherIcon"
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        alt="Weather Icon">
+
+    </div>
+</div>
+     <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
